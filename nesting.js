@@ -50,7 +50,16 @@ var employees = [
     3. Return the updated employee array.
 */
 
-//code
+const employeeUpdater = () => {
+  for(i = 0; i < employees.length; i++){
+    if(employees[i].firstName === 'Theo'){
+      employees.splice(i, 1)
+    } else if(employees[i].firstName === 'Lorie'){
+      employees[i].department = 'HR'
+  }
+  }
+  return employees
+}
 
 ////////// PROBLEM 2 //////////
 
@@ -60,13 +69,22 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
 /*
   The array above represents IDs tied to reported workplace accidents. 
-  An employee accidentally entered in duplicates to array, making it look as though there are more accidents this year than there actually are.
+  An employee accidentally entered in duplicates to array, making it look as though there are more accidents this year than there 
+  actually are.
     1. Write a function called 'removeDuplicates' that will remove all duplicate entries in the workplaceAccidents array.
     2. Use nested for loops to check for duplicate numbers, and then remove the duplicates from the array.
     3. Return the updated array.
 */
 
-//Code Here
+const removeDuplicates = () => {
+  let answer = []
+  for(i = 0; i < workplaceAccidents.length; i++){
+    if(answer.findIndex(elem => elem === workplaceAccidents[i]) === -1){
+      answer.push(workplaceAccidents[i])
+    }
+  }
+  return answer
+}
 
 ////////// PROBLEM 3 //////////
 
@@ -154,11 +172,13 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 
 const looper = () => {
   for(let i = 0; i < numsArr.length; i++){
-    if(numsArr[i] % 2 === 0){
-      return 'even'
+    for(let j = 0; j < numsArr[i].length; j++){
+    if(numsArr[i][j] % 2 === 0){
+      numsArr[i][j] = 'even'
     } else {
-      return 'odd'
+      numsArr[i][j] = 'odd'
     }
   }
+}
   return numsArr
 }
