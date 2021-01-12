@@ -51,11 +51,12 @@ var employees = [
 */
 
 const employeeUpdater = () => {
-  for(let i = 0; i < employees.length; i++){
+  for(i = 0; i <employees.length; i++){
     if(firstName === 'Theo'){
       
-    }
+    } 
   }
+  return employees
 }
 
 ////////// PROBLEM 2 //////////
@@ -73,8 +74,6 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
-
-
 
 ////////// PROBLEM 3 //////////
 
