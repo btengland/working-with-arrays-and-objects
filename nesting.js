@@ -50,14 +50,7 @@ var employees = [
     3. Return the updated employee array.
 */
 
-const employeeUpdater = () => {
-  for(i = 0; i <employees.length; i++){
-    if(firstName === 'Theo'){
-      
-    } 
-  }
-  return employees
-}
+//code
 
 ////////// PROBLEM 2 //////////
 
@@ -99,11 +92,8 @@ var cat = {
     2. Assign fluffy2ndFriend the name of Fluffy's 2nd friend.
 */
 
-//Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
-
-
+var grumpyActivity = cat.catFriends[0].activities[1]
+var fluffy2ndFriend = cat.catFriends[1].name = 'Lazy Bones'
 
 ////////// PROBLEM 4 //////////
 
@@ -141,9 +131,11 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
-
-
+const recordCleaner = () => {
+  for(let i = 0; i < myCar.accidents.length; i++){
+    myCar.accidents[i].atFaultForAccident = false
+  }
+}
 
 ////////// PROBLEM 5 //////////
 
@@ -160,6 +152,13 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
-
-
+const looper = () => {
+  for(let i = 0; i < numsArr.length; i++){
+    if(numsArr[i] % 2 === 0){
+      return 'even'
+    } else {
+      return 'odd'
+    }
+  }
+  return numsArr
+}
